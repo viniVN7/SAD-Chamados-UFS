@@ -22,6 +22,8 @@ BEGIN
 						DAY(@dt_inicial),
 						DATENAME(dw,@dt_inicial),
 						IIF(DATENAME(dw,@dt_inicial) IN ('Sábado','Domingo'),'SIM','NAO'),
+						--NULL,
+						--'NAO',
 						@MES,
 						DATENAME(mm,@dt_inicial),
 						DATEPART(qq,@dt_inicial),
@@ -35,6 +37,8 @@ BEGIN
 									('MES',
 									NULL,
 									NULL,
+									--NULL,
+									--NULL,
 									NULL,
 									NULL,
 									@MES,
@@ -54,4 +58,5 @@ BEGIN
 END
 
 EXEC SP_INSERT_DIM_TEMPO '20220101','20230331'
+
 SELECT * FROM DIM_TEMPO
