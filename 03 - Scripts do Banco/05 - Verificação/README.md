@@ -1,0 +1,1 @@
+Todos os scripts verificação dos indicadores
